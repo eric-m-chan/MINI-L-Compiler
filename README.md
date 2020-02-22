@@ -41,7 +41,7 @@ to pipe an input file:
 **In Progress**
 
 
-##Resources
+## Resources
 * Introduction to *flex*: [here](http://alumni.cs.ucr.edu/~lgao/teaching/flex.html)
 * Introduction to *bison*: [here](http://alumni.cs.ucr.edu/~lgao/teaching/bison.html)
 * A [.min](https://www.cs.ucr.edu/~cxu009/teaching/CS152-winter20/webpages1/fibonacci.min) code example and it's corresponding [tokens](https://www.cs.ucr.edu/~cxu009/teaching/CS152-winter20/webpages1/fibonacci.tokens).
