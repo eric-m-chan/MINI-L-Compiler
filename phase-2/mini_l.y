@@ -165,8 +165,8 @@ termbranch2:    ident L_PAREN termbranch21 R_PAREN      {printf("termbranch2 -> 
 termbranch21:   /* empty */                             {printf("termbranch21 -> epsilon\n");}
                 | termbranch22                          {printf("termbranch21 -> termbranch22\n");}
                 ;
-termbranch22:   expr                                    {printf("termbranch21 -> expr\n");}
-                | expr COMMA termbranch21               {printf("termbranch21 -> expr COMMA termbranch 22\n");}
+termbranch22:   expr                                    {printf("termbranch22 -> expr\n");}
+                | expr COMMA termbranch22               {printf("termbranch22 -> expr COMMA termbranch22\n");}
                 ;
 
 var:            ident varbranch                         {printf("var -> ident varbranch\n");}
