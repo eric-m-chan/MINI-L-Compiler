@@ -103,7 +103,6 @@ stmtbranch9:    RETURN expr                             {printf("stmtbranch9 -> 
                 ;
 
 boolexpr:       relandexpr boolbranch                   {printf("boolexpr -> relandexpr boolbranch\n");}
-                | L_PAREN boolexpr R_PAREN		{printf("boolexpr -> L_PAREN boolexpr R_PAREN\n");}
 		;
 boolbranch:     /* empty */                             {printf("boolbranch -> epsilon\n");}
                 | OR relandexpr boolbranch              {printf("boolbranch -> OR relandexpr boolbranch\n");}
