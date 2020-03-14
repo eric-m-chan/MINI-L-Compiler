@@ -361,8 +361,13 @@ do_loop:	DO BEGINLOOP				{
 			statements.push_back(": " + labels[1]);
 		}
 		;
-stmtbranch5:    FOR var ASSIGN number SEMICOLON boolexpr SEMICOLON var ASSIGN expr BEGINLOOP stmtloop ENDLOOP   {
-			//TODO
+stmtbranch5:    FOR varassign SEMICOLON boolexpr SEMICOLON stmtbranch1 BEGINLOOP stmtloop ENDLOOP   {	
+		
+
+		}
+                ;
+varassign:	var ASSIGN number			{
+			/* proxy var assignment so it is earlier on stack */
 			symbol assign_from = ops_table.back();
                         ops_table.pop_back();
                         symbol assign_to = ops_table.back();
@@ -375,8 +380,9 @@ stmtbranch5:    FOR var ASSIGN number SEMICOLON boolexpr SEMICOLON var ASSIGN ex
                                 statements.push_back("[]= " + assign_to.name + ", " + assign_from.name);
                         }
 
+
 		}
-                ;
+		;
 stmtbranch6:    READ stmtbranch61                       {	
 		}
                 ;
